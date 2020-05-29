@@ -29,13 +29,12 @@ def fib(n):
     x, y, z = 0, 0, 1
     while n:
         n -= 1
-        x = y
-        y = z
+        x, y = y, z
         z = x + y
     return y
 ```
 
-Once decorated, the function will inherit the [functionality](#features) of **safecache**.
+Once decorated, the function will inherit the [functionality](#features) of **safecache** and begin safely caching returned results.
 
 ## Cache Configurations
 
