@@ -64,6 +64,7 @@ is_immutable: Callable = lambda obj: builtins.isinstance(obj, IMMUTABLE_TYPES)
 
 is_mutable: Callable = lambda obj: not is_immutable(obj)
 
+
 def mutabletypeguard(function) -> Any:
     @wraps(function)
     def wrapper(*a, **kw) -> Any:
@@ -127,12 +128,13 @@ now = lambda: time.time() // 1
 
 Cache = namedtuple("Cache", ("expiry", "value"))
 
+
 def safecache(
         maxsize: int = None,
         ttl: float = math.inf,
         miss_callback: Callable = lambda _: _,
         *a, **kw,
-    ):
+):
     """safecache decorator implementation.
 
     Args
