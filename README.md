@@ -3,6 +3,10 @@
   <p><strong>A thread-safe and mutation-safe LRU cache for Python.</strong></p>
 </div>
 
+[![Build Status](https://cd.screwdriver.cd/pipelines/4896/badge?nocache=true)](https://cd.screwdriver.cd/pipelines/4896)
+[![Package](https://img.shields.io/badge/package-pypi-blue.svg)](https://pypi.org/project/safecache/)
+[![Codecov](https://codecov.io/gh/yahoo/safecache/branch/master/graph/badge.svg?nocache=true)](https://codecov.io/gh/yahoo/safecache)
+
 ## Features
 
 - Zero third-party dependencies.
