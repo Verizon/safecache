@@ -18,7 +18,7 @@
 ## Installation
 
 ```bash
-~$ pip install 'git+https://github.com/Verizon/safecache.git#egg=safecache'
+~$ pip install safecache
 ```
 
 ## Usage
