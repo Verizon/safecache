@@ -101,6 +101,7 @@ class CacheDescriptor(object):
             ))
         )
 
+
 class CacheInfo(CacheDescriptor):
     """`CacheDescriptor` alias for @lru_cache compatibility"""
 
