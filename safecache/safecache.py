@@ -133,8 +133,7 @@ def safecache(
         maxsize: int = None,
         ttl: float = math.inf,
         miss_callback: Callable = lambda _: _,
-        *a, **kw,
-):
+        *a, **kw):
     """safecache decorator implementation.
 
     Args
