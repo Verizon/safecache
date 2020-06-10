@@ -15,8 +15,8 @@ class CacheError(Exception):
 
 
 class CacheExpired(CacheError, ValueError):
-   """Cache expired from buffer"""
+    """Cache expired from buffer"""
 
 
 class CacheMiss(CacheError, KeyError):
-   """Cache missed from buffer"""
+    """Cache missed from buffer"""

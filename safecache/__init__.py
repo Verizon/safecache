@@ -16,6 +16,9 @@ from .safecache import is_mutable
 from .safecache import mutabletypeguard
 from .safecache import safecache
 
-from .version import VERSION
-
-__version__ = ".".join(map(str, VERSION))
+try:
+    import pkg_resources
+    __version__ = pkg_resources.get_distribution("safecache").version
+except ImportError:  # pragma: no cover
+    # Set the version to 0.0.0 if the pkg_resources module is not working
+    __version__ = '0.0.0'
