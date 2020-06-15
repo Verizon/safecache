@@ -1,10 +1,10 @@
+[![Build Status](https://cd.screwdriver.cd/pipelines/4896/badge?nocache=true)](https://cd.screwdriver.cd/pipelines/4896)
+[![Package](https://img.shields.io/badge/package-pypi-blue.svg)](https://pypi.org/project/safecache/)
+
 <div align="center">
   <h1>safecache</h1>
   <p><strong>A thread-safe and mutation-safe LRU cache for Python.</strong></p>
 </div>
-
-[![Build Status](https://cd.screwdriver.cd/pipelines/4896/badge?nocache=true)](https://cd.screwdriver.cd/pipelines/4896)
-[![Package](https://img.shields.io/badge/package-pypi-blue.svg)](https://pypi.org/project/safecache/)
 
 ## Features
 
