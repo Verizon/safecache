@@ -188,7 +188,7 @@ def safecache(
                     raise CacheMiss
                 # check if cache has expired. Expiration is determined from the
                 # heuristics of current time and pre-determined expiration date.
-                elif ttl != math.inf and cache.__getitem__(key).expiry >= now():
+                elif ttl != math.inf and cache.__getitem__(key).expiry <= now():
                     raise CacheExpired
                 with r_mutex:
                     # this swap behavior is not completely compliant with the LRU
@@ -210,10 +210,9 @@ def safecache(
                 # for expired caches, pull a version that's expected to be
                 # fresh and update the existing cache's attributes/values.
                 result: Any = function(*entry, **kw)
-                node = cache.__getitem__(key)
-                node.expiry = now() + ttl
-                node.value = result
+                node = Cache(value=result, expiry=now() + ttl)
                 with w_mutex:
+                    cache.__setitem__(key, node)
                     _pq_inpl_swap(pq.index(key), -1)
                     pq.appendleft(pq.pop())
                     hits += 1
