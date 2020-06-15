@@ -215,7 +215,7 @@ def safecache(
                     cache.__setitem__(key, node)
                     _pq_inpl_swap(pq.index(key), -1)
                     pq.appendleft(pq.pop())
-                    hits += 1
+                    misses += 1
             return cache.__getitem__(key).value
         wrapper.cache_info = _cache_info
         return wrapper
