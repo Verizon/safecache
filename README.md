@@ -1,5 +1,5 @@
-[![Build Status](https://cd.screwdriver.cd/pipelines/4896/badge?nocache=true)](https://cd.screwdriver.cd/pipelines/4896)
-[![Package](https://img.shields.io/badge/package-pypi-blue.svg)](https://pypi.org/project/safecache/)
+[![PyPI](https://img.shields.io/badge/package-pypi-blue.svg)](https://pypi.org/project/safecache/)
+![GitHub Actions: python-pytest](https://github.com/Verizon/safecache/workflows/python-pytest/badge.svg)
 
 <div align="center">
   <h1>safecache</h1>
