@@ -22,7 +22,7 @@
 
 ## Usage
 
-**safecache** works just like the [functool's lru_cache](https://docs.python.org/3/library/functools.html#functools.lru_cache) where you would simply decorate a function with [optional configurations](#cache-configurations).
+**safecache** works just like the [functool's lru_cache](https://docs.python.org/3/library/functools.html#functools.lru_cache) where you decorate a callable with [optional configurations](#cache-configurations).
 
 ```python
 from safecache import safecache
@@ -37,7 +37,7 @@ def fib(n):
     return y
 ```
 
-Once decorated, the function will inherit the [functionality](#features) of **safecache** and begin safely caching returned results.
+Once decorated, the callable will inherit the [functionality](#features) of **safecache** and begin safely caching returned results.
 
 ## Cache Configurations
 
